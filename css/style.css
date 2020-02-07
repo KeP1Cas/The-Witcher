@@ -99,11 +99,9 @@ body {
     margin-bottom: 85px;
 }
 
-.content{
-
-}
 
 .genre{
+    animation-delay: 1s;
     font-size: 14px;
     line-height: 16px;
 }
@@ -112,6 +110,7 @@ body {
     margin-top: 16px;
     display: flex;
     margin-bottom: 10px;
+    animation-delay: 0.3s
 }
 
 .raiting-stars{
@@ -133,6 +132,7 @@ body {
     font-size: 76px;
     line-height: 89px;
     margin-bottom: 10px;
+    animation-delay: 0.5s
 }
 
 .main-diccription{
@@ -140,9 +140,11 @@ body {
     line-height: 150%;
     max-width: 458px;
     margin-bottom: 40px;
+    animation-delay: 0.7s
 }
 
 .btn {
+    display: inline-block;
     background: #9D2929;
     border-radius: 8px;
     padding: 22px 72px;
@@ -150,6 +152,11 @@ body {
     font-size: 14px;
     line-height: 16px;
     font-weight: bold;
+    animation-delay: 0.9s
+}
+
+.btn:active {
+    color: #fff;
 }
 
 .play__img{
@@ -157,6 +164,9 @@ body {
     transform: translateX(5px);
 }
 .play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #9D2929;
     width: 100px;
     height: 100px;
@@ -174,6 +184,7 @@ body {
     border-radius: 50%;
     left: -16px;
     top: -16px;
+    animation: pulse 0.7s ease-in-out 0.5s infinite;
 }
 
 /* series */
@@ -304,6 +315,7 @@ body {
         right: 35px;
         top: 40px;
         background-color: #fff;
+        cursor: pointer;
 
     }
     .menu-btn::before {
@@ -313,6 +325,7 @@ body {
         width: 30px;
         height: 2px;
         background-color: #fff;
+        transition: transform 0.2s;
         top: 0;
         left: 0;
         margin-top: -7px;
@@ -325,25 +338,66 @@ body {
         width: 30px;
         height: 2px;
         background-color: #fff;
+        transition: transform 0.2s;
         top: 0;
         left: 0;
         margin-top: 7px;
     }
+    .menu-btn-active {
+        height: 0;
+    }
+    .menu-btn-active::before {
+        transform: rotate(45deg);
+        margin-top: 0;
+    }
+    .menu-btn-active::after {
+        transform: rotate(-45deg);
+        margin-top: 0;
+    }
     .header {
-        flex-direction: column;
+        display: none;
         position: absolute;
         right: 0;
         top: 0;
         background-color: #9d2929;
         width: 250px;
+        padding-bottom: 40px;
+        flex-direction: column;
+    }
+    .header-active{
+        display: flex;
+    }
+    .logo{
+        margin-bottom: 25px;
     }
     .menu-list {
         margin: auto;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .menu-link {
         margin-right: 0;
+        margin-bottom: 17px;
     }
-    .social-lin:first-child {
-
+    .social {
+        order: 1;
+        margin-bottom: 22px;
     }
+    .social-link:first-child {
+        margin-left: 0;
+    }
+     .swiper-container {
+        width: 80%;
+     }
+     .main-content {
+    margin-top: 196px;
+     } 
+     .main-title {
+        font-size: 56px;
+     } 
+     .series {
+        width: 80%;
+     }
 }
